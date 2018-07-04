@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .w {
+            height: 70px;
+            /*border: 1px solid red;*/
+        }
+
+        .w .q-link {
+            text-decoration: none;
+            font-size: 12px;
+            color: grey;
+            display: inline-block;
+            width: 120px;
+            height: 20px;
+            padding-left: 22px;
+            padding-right: 0px;
+            background: url("images/q-icon.png") 2px no-repeat;
+            position: relative;
+            top: -20px;
+            left: 1000px;
+        }
+
+        #logo a {
+            position: relative;
+            left: 200px;
+        }
+
+        #logo b {
+            display: inline-block;
+            width: 300px;
+            height: 70px;
+            /*line-height: 70px;*/
+            /*border: 1px solid red;*/
+            background: url("images/l-icon.png") no-repeat;
+            position: absolute;
+            top: 20px;
+            left: 380px;
+            /*top: ;*/
+            /*z-index: 3;*/
+        }
+
+        .tips-wrapper {
+            font-size: 14px;
+            color: grey;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #fff8f0;
+        }
+
+        .tips-wrapper .icon-tips {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute;
+            left: 220px;
+            top: 83px;
+            background: url("images/icon-tips.png") no-repeat;
+        }
+
+        .tips-wrapper p a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        .tips-wrapper p a:hover {
+            text-decoration: underline;
+        }
+
+        .login-form {
+            width: 400px;
+            height: 400px;
+            /*border: 1px solid red;*/
+            position: relative;
+            top: 20px;
+            left: 800px;
+
+        }
+
+        .login-wrap .tips-wrapper1 {
+            background: #fff8f0;
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .login-wrap .tips-wrapper1 .icon-tips {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            position: absolute;
+            left: 35px;
+            top: 13px;
+            background: url("images/icon-tips.png") no-repeat;
+        }
+
+        .login-tab {
+            width: 200px;
+            height: 50px;
+            /*border: 1px solid red;*/
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 1px solid #d7d7d7;
+            background-color: white;
+        }
+
+        .login-tab a {
+            color: grey;
+            font-size: 20px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        .login-tab a:hover {
+            color: red;
+        }
+
+        .login-tab-r {
+            position: absolute;
+            left: 200px;
+            top: 40px;
+        }
+
+        .denglu {
+            height: 310px;
+            /*border: 1px solid red;*/
+            /*border-bottom: 1px solid #d3d3d3;*/
+            background-color: white;
+        }
+
+        .ma {
+            margin-left: 20px;
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            position: relative;
+            top: 25px;
+            left: 90px;
+
+        }
+
+        .shouji {
+            display: none;
+            position: relative;
+            top: -150px;
+            left: 230px;
+        }
+
+        .dakai {
+            font-size: 13px;
+            text-align: center;
+            position: relative;
+            top: -100px;
+            color: grey;
+
+        }
+
+        .dakai a {
+            text-decoration: none;
+            color: #ff6865;
+            font-size: 13px;
+        }
+
+        .mian ul li {
+            width: 100px;
+            height: 20px;
+            color: grey;
+            font-size: 14px;
+            display: inline-block;
+            /*padding:0px 20px;*/
+            position: relative;
+            top: -80px;
+            left: 80px;
+        }
+
+        .mian ul li .shur {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            background: url("images/qr-coagent.png") no-repeat;
+            position: absolute;
+            top: -4px;
+            left: -28px;
+        }
+
+        .mian ul li .kuai {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            background: url("images/qr-coagent.png") -27px 0px no-repeat;
+            position: absolute;
+            top: -4px;
+            left: -28px;
+        }
+
+        .mian ul li .an {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            background: url("images/qr-coagent.png") -54px 0px no-repeat;
+            position: absolute;
+            top: -4px;
+            left: -28px;
+        }
+
+        .wei ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 10px;
+            position: relative;
+            top: -70px;
+            left: 40px;
+        }
+
+        .wei ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .wei ul li a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .wei ul li .qq {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            background: url("images/QQ-weixin.png") 0px 2px no-repeat;
+            position: absolute;
+            top: 1px;
+            left: -22px;
+        }
+
+        .wei ul li .xin {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            background: url("images/QQ-weixin.png") -19px 2px no-repeat;
+            position: absolute;
+            left: -22px;
+            top: 1px;
+        }
+
+        .wei ul li .zhu {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            background: url("images/pwd-icons-new.png") -101px -73px no-repeat;
+            position: absolute;
+            left: -20px;
+            top: 1px;
+        }
+
+        .wei ul li:nth-child(3):hover {
+            text-decoration: underline;
+        }
+
+        .login-wrap {
+            height: 500px;
+            background: url("images/5b35f54eN3d396dcd.jpg") 200px 12px no-repeat;
+            background-color: rgb(190, 216, 191);
+        }
+
+        .links {
+            color: grey;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .links a {
+            font-size: 13px;
+            text-decoration: none;
+            color: grey;
+            padding: 0px 10px 0px 10px;
+
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+            color: #ff82b5;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: grey;
+        }
+
+        #sao {
+            /*display: none;*/
+        }
+
+        #hao {
+            height: 300px;
+            border: 1px solid red;
+            background-color: white;
+        }
+    </style>
+    <script src="Js/jquery-1.12.4.js"></script>
+</head>
+<body>
+<div class="w">
+    <div id="logo">
+        <a href="#">
+            <img src="images/logo-201305-b.png" alt="京东" width="170" height="60">
+        </a>
+        <b></b>
+    </div>
+    <a href="#" target="_blank" class="q-link"><b></b>登录页面，调查问卷</a>
+</div>
+<div>
+    <div class="tips-wrapper">
+        <div class="tips-inner">
+            <div class="cont-wrapper">
+                <i class="icon-tips"></i>
+                <p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+                    <a href="#" class="black" target="_blank">《京东隐私政策》</a>
+                    已上线，将更有利于保护您的个人隐私。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="login-wrap">
+        <div class="login-form">
+            <div class="tips-wrapper1">
+                <div class="tips-inner">
+                    <div class="cont-wrapper">
+                        <i class="icon-tips" style="background: url('images/icon-tips.png') no-repeat;"></i>
+                        <p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="login-tab login-tab-l">
+                <a href="javascript:void(0)" class="checked" style="color: red"> 扫码登录</a>
+            </div>
+            <div class="login-tab login-tab-r">
+                <a href="javascript:void(0)">账户登录</a>
+            </div>
+            <div id="sao">
+                <div class="denglu">
+                    <div class="ma">
+                        <img src="images/show (1).png" height="147" width="147"/>
+                    </div>
+                    <div class="shouji">
+                        <img src="images/phone-orange.png" height="168" width="148"/>
+                    </div>
+
+                </div>
+                <div class="dakai">打开 <a href="">手机京东</a> 扫描二维码</div>
+                <div class="mian">
+                    <ul>
+                        <li><i class="shur"></i><span>免输入</span></li>
+                        <li><i class="kuai"></i><span>更快</span></li>
+                        <li><i class="an"></i><span>更安全</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div id="hao">-->
+                <!--<form action="#" method="post" class="biaodan">-->
+                    <!--<i class="yonhu"></i>-->
+                    <!--<input type="text" placeholder="邮箱/用户名/已验证手机">-->
+                    <!--<i class="mima"></i>-->
+                    <!--<input type="text" placeholder="密码">-->
+                <!--</form>-->
+            <!--</div>-->
+            <div class="wei">
+                <ul>
+                    <li><i class="qq"></i><a href="#">QQ</a></li>
+                    <li><i class="xin"></i><a href="#">微信</a></li>
+                    <li style="position: relative;left: 150px;"><i class="zhu"></i><a href="#" style="color: red">立即注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer-2013">
+    <div class="links">
+        <a rel="nofollow" target="_blank" href="#">
+            关于我们
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            联系我们
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            人才招聘
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            商家入驻
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            广告服务
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+            手机京东
+        </a>
+        |
+        <a target="_blank" href="#">
+            友情链接
+        </a>
+        |
+        <a target="_blank" href="#">
+            销售联盟
+        </a>
+        |
+        <a href="#" target="_blank">
+            京东社区
+        </a>
+        |
+        <a href="#" target="_blank">
+            京东公益
+        </a>
+        |
+        <a target="_blank" href="#">English Site</a>
+    </div>
+    <div class="copyright">
+        Copyright&nbsp;&copy;&nbsp;2004-2018&nbsp;&nbsp;京东JD.com 版权所有
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".ma").mouseover(function () {
+            $(this).stop().animate({"left": "10px"}, 400, function () {
+                $(".shouji").show();
+            });
+        }).mouseleave(function () {
+            $(".shouji").hide();
+            $(this).stop().animate({"left": "90px"}, 300);
+            // alert("ff")
+        });
+    });
+</script>
+</body>
+</html>
